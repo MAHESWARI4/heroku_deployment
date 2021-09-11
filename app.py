@@ -51,14 +51,12 @@ def predict():
     print(preg, plas,pres,skin,test,mass,pedi,age)
     output = model.predict([[preg, plas,pres,skin,test,mass,pedi,age]])
     if output[0]==1:
-        # print('diabetic')
         ans = 'diabetic'
     else:
-        # print('not diabetic')
         ans = 'non diabetic'
-    # return 'Form Submitted'
-    return render_template('predict.html', predict= f'the person is {ans}')
+    return 'Form Submitted'
+#     return render_template('predict.html', predict= f'the person is {ans}')
 #run the app
 if __name__ == '__main__':
-    app.run()
-# app.run(debug=True)
+    app.run(debug=True)
+#     app.run()
