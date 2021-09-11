@@ -54,8 +54,8 @@ def predict():
         ans = 'diabetic'
     else:
         ans = 'non diabetic'
-    return 'Form Submitted'
-#     return render_template('predict.html', predict= f'the person is {ans}')
+#     return 'Form Submitted'
+    return render_template('predict.html', predict= f'the person is {ans}')
 #run the app
 if __name__ == '__main__':
     app.run(debug=True)
